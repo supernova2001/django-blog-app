@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+</head>
+<html>
+    <body>
+        {% for item in object_list %}
+        <ul>
+            <li>
+                <p><a href="{% url 'details' item.pk%}">{{item.title}}</a> | {{item.author}}</p>
+                <p>{{item.body}}</p>
+            </li>
+        </ul>
+        {% endfor %}
+    </body>
+</html>
